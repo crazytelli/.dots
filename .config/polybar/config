@@ -58,8 +58,8 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 font-6 = UbuntuMono Nerd Font:pixelsize=12;2
 
 modules-left = i3 xwindow
-modules-center = date
-modules-right = pacman-updates filesystem pulseaudio memory cpu battery powermenu
+modules-center =
+modules-right = pacman-updates filesystem pulseaudio memory cpu battery powermenu date
 
 
 tray-position = right
@@ -88,8 +88,6 @@ label = %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-;format-prefix-foreground = #ffbb00
-;format-prefix-background = #ffbb00
 
 
 [module/xwindow]
@@ -118,11 +116,7 @@ interval = 25
 
 mount-0 = /
 mount-1 = /home
-
 label-mounted =  %free%
-;label-mounted =  %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
@@ -204,8 +198,8 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "cpu "
+format-prefix-foreground = ${colors.foreground}
 ;format-underline = #f90000
 format-underline = ${colors.secondary}
 label = %percentage:2%%
@@ -213,8 +207,8 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
 format-underline = #4bffdc
 label = %percentage_used%%
 
@@ -338,24 +332,24 @@ format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix-foreground = ${colors.foreground}
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
 
 [module/temperature]
@@ -385,9 +379,9 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.foreground}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.foreground}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
