@@ -82,7 +82,7 @@ cursor-scroll = ns-resize
 
 [module/pacman-updates]
 type = custom/script
-exec = pacman -Qu | wc -l
+exec = checkupdates | wc -l
 interval = 1000
 label = %output%
 format-foreground = ${colors.foreground}
