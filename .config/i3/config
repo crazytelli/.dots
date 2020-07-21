@@ -6,7 +6,7 @@ exec_always --no-startup-id optimus-manager-qt
 exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
 
 # Instalar autotiling com yay -S autotiling
-#exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 
 # Needed for i3-gaps
 hide_edge_borders both
