@@ -43,7 +43,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-surround'
 "Plug 'ThePrimeagen/vim-be-good'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-"Plug 'dylanaraps/wal'
+Plug 'dylanaraps/wal'
 "Plug 'skywind3000/asyncrun.vim'
 "Plug 'Chiel92/vim-autoformat'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -73,8 +73,8 @@ set smartcase
 set incsearch
 set mouse=a
 set wildmode=longest,list,full
-setlocal spell
-set spelllang=pt_br,en_us
+"setlocal spell
+"set spelllang=pt_br,en_us
 set splitbelow splitright
 set colorcolumn=81
 set cursorline
@@ -83,7 +83,7 @@ set clipboard+=unnamedplus
 "spell check shortcut Ctrl+L
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-let g:airline_theme='nord'
+"let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 
 " Vim-gitgutter settings
