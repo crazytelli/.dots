@@ -13,6 +13,4 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Permite mudar de diretorio sem digitar cd
-shopt -s autocd
 export PATH=$HOME/.local/bin:$PATH

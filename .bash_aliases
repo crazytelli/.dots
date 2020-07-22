@@ -18,8 +18,8 @@ alias r="ranger"
 alias cfi="${EDITOR} $HOME/.config/i3/config"
 alias cfp="${EDITOR} $HOME/.config/polybar/config"
 alias cfn="${EDITOR} $HOME/.config/nvim/init.vim"
-alias cs="config status"
-alias ca="config add"
 
 # Git bare repository - gerenciando dot files com git --bare
-alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias cs="cfg status"
+alias ca="cfg add"
