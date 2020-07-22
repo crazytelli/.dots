@@ -52,6 +52,7 @@ let g:deoplete#enable_at_startup = 1
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+Plug 'ryanoasis/vim-devicons' " must be loaded last
 call plug#end()
 
 syntax on
@@ -83,6 +84,7 @@ set clipboard+=unnamedplus
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 let g:airline_theme='nord'
+let g:airline_powerline_fonts = 1
 
 " Vim-gitgutter settings
 let g:gitgutter_enabled = 1
