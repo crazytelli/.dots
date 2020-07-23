@@ -24,12 +24,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'KeitaNakamura/tex-conceal.vim'
 Plug 'ervandew/supertab'
-"Plug 'zchee/deoplete-jedi'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 "Plug 'davidhalter/jedi-vim'
@@ -41,14 +40,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
-"Plug 'ThePrimeagen/vim-be-good'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'dylanaraps/wal'
 "Plug 'skywind3000/asyncrun.vim'
 "Plug 'Chiel92/vim-autoformat'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"let g:deoplete#enable_at_startup = 1
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
@@ -73,6 +71,8 @@ set smartcase
 set incsearch
 set mouse=a
 set wildmode=longest,list,full
+set nobackup
+set nowritebackup
 "setlocal spell
 "set spelllang=pt_br,en_us
 set splitbelow splitright
