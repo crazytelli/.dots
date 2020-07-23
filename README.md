@@ -5,6 +5,20 @@
 - usando ssh:
 `git clone --bare git@github.com:crazytelli/.dots.git`
 
+## Iniciando do zero
+
+```
+git init --bare $HOME/.cfg
+alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+cfg config --local status.showUntrackedFiles no
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'" >> $HOME/.bashrc
+```
+## Importando
+A etapa `alias cfg` é o importante para correta execução. Se não estiver iniciando do zero,
+basta executar o alias temporariamente `alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'`
+e seguir os próximos passos.
+
+
 Em seguida realizar:
 `cfg checkout`
 
@@ -21,7 +35,7 @@ Agora pode-se executar novamente `cfg checkout`
 
 Importante executar também:
 
-`config config --local status.showUntrackedFiles no`
+`cfg config --local status.showUntrackedFiles no`
 
 A explicação pode ser vista no
 [DistroTube](https://www.youtube.com/watch?v=tBoLDpTWVOM) e também no artigo
