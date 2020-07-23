@@ -10,7 +10,7 @@ elseif has('unix')
         echo "Downloading junegunn/vim-plug to manage plugins..."
         silent !mkdir -p ~/.config/nvim/autoload/
         silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
-        autocmd VimEnter * PlugInstall
+        autocmd VimEnter * PlugInstall | source $MYVIMRC
     endif
     call plug#begin('~/.config/nvim/plugged')
 endif
@@ -18,7 +18,7 @@ endif
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -32,7 +32,7 @@ Plug 'neomake/neomake'
 "Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/goyo.vim'
 Plug 'Konfekt/FastFold'
 Plug 'airblade/vim-gitgutter'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
