@@ -3,35 +3,9 @@ let mapleader = " "
 let g:tex_flavor = 'latex'
 
 " adiciona os plugins para serem instalados com vim-plug.
-"dessa forma fica mais limpo e organizado
+" dessa forma fica mais limpo e organizado
 source $HOME/.config/nvim/general/plugins.vim
-
-syntax on
-filetype plugin on
-colorscheme nord
-set background=dark
-set termguicolors
-set encoding=utf-8
-set fileencoding=utf-8
-set number relativenumber
-set noswapfile
-set smartindent
-set nowrap
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartcase
-set incsearch
-set mouse=a
-set wildmode=longest,list,full
-set nobackup
-set nowritebackup
-"setlocal spell
-"set spelllang=pt_br,en_us
-set splitbelow splitright
-set colorcolumn=81
-set cursorline
-set clipboard+=unnamedplus
+source $HOME/.config/nvim/general/configs.vim
 
 "spell check shortcut Ctrl+L
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
@@ -73,7 +47,6 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " Vim hexokinase - Display Hex colors in terminal
 let g:Hexokinase_refreshEvents = ['InsertLeave']
-
 let g:Hexokinase_optInPatterns = [
             \     'full_hex',
             \     'triple_hex',
@@ -84,7 +57,6 @@ let g:Hexokinase_optInPatterns = [
             \     'colour_names'
             \ ]
 let g:Hexokinase_highlighters = ['backgroundfull']
-
 " Reenable hexokinase on enter
 autocmd VimEnter * HexokinaseTurnOn
 
@@ -105,8 +77,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"exits insert mode with 'jj'
-imap jj <esc>
 
 " ajusta tamanho do buffer atual
 nnoremap <silent> <M-j>    :resize -2<CR>
