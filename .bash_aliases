@@ -23,5 +23,6 @@ alias cdn="cd $HOME/.config/nvim/ && ls"
 
 # Git bare repository - gerenciando dot files com git --bare
 alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
-alias cs="cfg status"
-alias ca="cfg add"
+alias cfgs="cfg status"
+alias cfga="cfg add"
+alias cfgc="cfg commit -a"
