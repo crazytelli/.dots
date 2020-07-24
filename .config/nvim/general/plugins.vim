@@ -45,7 +45,7 @@ Plug 'dylanaraps/wal'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "let g:deoplete#enable_at_startup = 1
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'mboughaba/i3config.vim'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'ryanoasis/vim-devicons' " must be loaded last

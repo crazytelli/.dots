@@ -29,7 +29,7 @@ bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 
 set $mod Mod4
-set $alt Mod1
+set $altgr Mod5
 
 set $term --no-startup-id $TERMINAL
 
@@ -70,6 +70,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $term
+
+bindsym $altgr+f exec Brave
 
 # kill focused window
 bindsym $mod+q kill
