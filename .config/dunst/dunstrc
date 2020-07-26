@@ -263,6 +263,10 @@
     # Close all notifications.
     close_all = ctrl+shift+space
 
+    history = ctrl+comma
+
+    context = ctrl+period
+
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
