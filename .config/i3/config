@@ -77,10 +77,10 @@ bindsym $altgr+f exec Brave
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
+ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec dmenu_run -nb '#4C566A' -sf '#1e1e1e' -sb '#E5E9F0' -nf '#E5E9F0'
 
- bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+ #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
