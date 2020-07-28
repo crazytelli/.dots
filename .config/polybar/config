@@ -57,9 +57,9 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 font-6 = UbuntuMono Nerd Font:pixelsize=12;2
 
-modules-left = i3 xwindow
-modules-center =
-modules-right = pacman-updates filesystem pulseaudio memory cpu battery powermenu date
+modules-left = bspwm i3 xwindow
+modules-center = date
+modules-right = pacman-updates filesystem pulseaudio memory cpu battery xkeyboard powermenu
 
 
 tray-position = right
@@ -254,7 +254,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-;date = %A, %d
+date = %d %b %t
 date-alt = %A, %d %b %y
 
 time = %H:%M

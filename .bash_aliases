@@ -5,7 +5,7 @@ alias grep="grep --color=auto"
 # copy move and remove commands
 alias cp="cp -iv"
 alias mv="mv -iv"
-alias rm="rm -vI"
+alias rm="rm -iv"
 alias mkd="mkdir -pv"
 
 # pacman aliases
