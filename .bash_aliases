@@ -26,3 +26,4 @@ alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias cfgs="cfg status"
 alias cfga="cfg add"
 alias cfgc="cfg commit -a"
+alias cfgp="cfg push"
