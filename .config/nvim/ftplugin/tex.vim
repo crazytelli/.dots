@@ -1,7 +1,7 @@
 "------------------ settings for Vimtex ------------------------------
-call deoplete#custom#var('omni', 'input_patterns', {
-            \ 'tex': g:vimtex#re#deoplete
-            \})
+"call deoplete#custom#var('omni', 'input_patterns', {
+            "\ 'tex': g:vimtex#re#deoplete
+            "\})
 
 let g:vimtex_compiler_progname = 'nvr'
 
