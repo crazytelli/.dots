@@ -5,7 +5,7 @@ exec_always picom -f
 exec_always --no-startup-id optimus-manager-qt
 exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
 
-exec_always udiskie -ant
+exec udiskie -ant
 
 # Instalar autotiling com yay -S autotiling
 exec_always --no-startup-id autotiling
@@ -73,6 +73,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec $term
 
+bindsym $mod+m exec $term -e ranger
+
 bindsym $altgr+f exec Brave
 
 # kill focused window
@@ -91,8 +93,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # move around workspaces
-bindsym $mod+n workspace prev
-bindsym $mod+m workspace next
+bindsym $mod+p workspace prev
+bindsym $mod+n workspace next
 
 # move focused window
 bindsym $mod+Shift+h move left
