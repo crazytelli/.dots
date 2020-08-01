@@ -176,7 +176,7 @@ assign [class="Steam"] $ws9
 assign [class="discord"] $ws8
 assign [class="Civ6Sub"] $ws10
 
-for_window [class="Civ6Sub"] floating enable
+#for_window [class="Civ6Sub"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
