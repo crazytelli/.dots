@@ -9,7 +9,8 @@ alias rm="rm -iv"
 alias mkd="mkdir -pv"
 
 # pacman aliases
-alias pac='sudo pacman -Syu '
+alias pac='sudo pacman -S'
+alias update='sudo pacman -Syu'
 alias pacq='pacman -Q | grep'
 alias pacs='pacman -Ss '
 
@@ -27,3 +28,5 @@ alias cfgs="cfg status"
 alias cfga="cfg add"
 alias cfgc="cfg commit -a"
 alias cfgp="cfg push"
+
+alias startx='startx;.prime-switch'

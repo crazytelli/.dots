@@ -36,5 +36,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# Iniciando programas e o window manager
+
+prime-offload
 dunst &
 exec i3
