@@ -38,6 +38,5 @@ fi
 
 # Iniciando programas e o window manager
 
-prime-offload
 dunst &
 exec i3

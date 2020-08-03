@@ -28,5 +28,3 @@ alias cfgs="cfg status"
 alias cfga="cfg add"
 alias cfgc="cfg commit -a"
 alias cfgp="cfg push"
-
-alias startx='startx;.prime-switch'
