@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while true; do
+    if ! pgrep -x Xorg; then
+        sudo python3 -u -m optimus_manager.hooks.pre_xorg_start
+        startx
+        exec ~/.prime-switch
+        break
+    fi
+    sleep 30
+done
