@@ -5,12 +5,12 @@ alias grep="grep --color=auto"
 # copy move and remove commands
 alias cp="cp -iv"
 alias mv="mv -iv"
-alias rm="rm -iv"
+alias rm="rm -Iv"
 alias mkd="mkdir -pv"
 
 # pacman aliases
 alias pac='sudo pacman -S'
-alias update='sudo pacman -Syu'
+alias pacup='sudo pacman -Syu'
 alias pacq='pacman -Q | grep'
 alias pacs='pacman -Ss '
 
