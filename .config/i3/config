@@ -3,7 +3,8 @@
 exec_always --no-startup-id $HOME/.config/polybar/launchpolybar.sh
 exec_always picom -f
 exec_always --no-startup-id optimus-manager-qt
-exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
+#exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
+exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/home-harden.jpg
 
 exec udiskie -ant
 
@@ -15,7 +16,7 @@ hide_edge_borders both
 
 # #---Basic Definitions---# #
 set $inner_gaps 15
-set $outer_gaps 15
+set $outer_gaps 5
 
 # #---Gaps---# #
 for_window [class="^.*"] border pixel 2
@@ -31,7 +32,7 @@ bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 
 set $mod Mod4
-set $altgr Mod5
+#set $altgr ISO_Level3_Shift
 
 set $term --no-startup-id alacritty
 
@@ -81,10 +82,10 @@ bindsym $altgr+f exec Brave
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
- bindsym $mod+d exec dmenu_run
+ #bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec dmenu_run -nb '#4C566A' -sf '#1e1e1e' -sb '#E5E9F0' -nf '#E5E9F0'
 
- #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -93,8 +94,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # move around workspaces
-bindsym $mod+p workspace prev
 bindsym $mod+n workspace next
+bindsym $mod+p workspace prev
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -112,12 +113,12 @@ bindsym $mod+semicolon split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacked
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacked
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
