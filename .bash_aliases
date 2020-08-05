@@ -2,6 +2,7 @@
 
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep="grep --color=auto"
+
 # copy move and remove commands
 alias cp="cp -iv"
 alias mv="mv -iv"
@@ -15,7 +16,6 @@ alias pacq='pacman -Q | grep'
 alias pacs='pacman -Ss '
 
 # files and configs shortcuts
-alias r="ranger"
 alias v="nvim"
 alias cfi="${EDITOR} $HOME/.config/i3/config"
 alias cfp="${EDITOR} $HOME/.config/polybar/config"
