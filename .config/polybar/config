@@ -17,7 +17,7 @@
 ;==========================================================
 
 [colors]
-background = #2E3440
+background = #AA2E3440
 background-alt = #4C566A
 foreground = #ECEFF4
 foreground-alt = #555
@@ -59,7 +59,7 @@ font-6 = UbuntuMono Nerd Font:pixelsize=12;2
 
 modules-left = bspwm i3 xwindow
 modules-center = date
-modules-right = pacman-updates filesystem pulseaudio memory cpu battery-brodie xkeyboard powermenu
+modules-right = pacman-updates filesystem pulseaudio memory cpu battery xkeyboard powermenu
 
 
 tray-position = right
@@ -67,7 +67,7 @@ tray-padding = 2
 tray-background = ${colors.background}
 
 ;wm-restack = bspwm
-wm-restack = i3
+;wm-restack = i3
 
 ;override-redirect = true
 
@@ -332,7 +332,7 @@ adapter = ACAD
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb154a
+format-charging-underline = #FFB154A
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
