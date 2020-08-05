@@ -7,6 +7,7 @@
 
 PS1='[\u@\h \W]\$ '
 
+set -o vi
 
 # Meus alias
 if [ -f ~/.bash_aliases ]; then
