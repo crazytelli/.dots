@@ -5,12 +5,6 @@
 source $HOME/.config/nvim/general/plugins.vim
 source $HOME/.config/nvim/general/configs.vim
 
-let mapleader = " "
-
-let g:tex_flavor = 'latex'
-
-"spell check shortcut Ctrl+L
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 "let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1

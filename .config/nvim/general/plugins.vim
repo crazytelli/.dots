@@ -25,7 +25,7 @@ Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
-Plug 'KeitaNakamura/tex-conceal.vim'
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'ervandew/supertab'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'

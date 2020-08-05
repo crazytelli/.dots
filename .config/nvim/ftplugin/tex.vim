@@ -19,10 +19,18 @@ let g:vimtex_compiler_progname = 'nvr'
 " Usando plugin FastFold:
 "let g:tex_fold_enabled = 1
 
-let g:tex_conceal='abdmg'
-set conceallevel=1
-hi Conceal ctermbg=none
-hi Pmenu guibg=gray
+let g:tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
+let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
+
+set conceallevel=2
+let g:tex_conceal="abdgm"
+
+"configuração antiga:
+"let g:tex_conceal='abdmg'
+"set conceallevel=1
+"hi Conceal ctermbg=none
+"hi Pmenu guibg=gray
+
 let g:vimtex_quickfix_mode=0
 "let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_method='zathura'
