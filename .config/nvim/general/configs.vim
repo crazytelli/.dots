@@ -1,7 +1,8 @@
 syntax on
 filetype plugin on
 colorscheme nord
-set background=dark
+hi Normal guibg=NONE ctermbg=NONE
+"set background=dark
 set termguicolors
 set encoding=utf-8
 set fileencoding=utf-8
@@ -24,4 +25,3 @@ set splitbelow splitright
 set colorcolumn=81
 set cursorline
 set clipboard+=unnamedplus
-

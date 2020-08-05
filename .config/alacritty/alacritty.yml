@@ -54,7 +54,7 @@ colors:
     #white: "#ffffff"
 
 
-background_opacity: 0.80
+background_opacity: 0.90
 
 font:
   normal:
