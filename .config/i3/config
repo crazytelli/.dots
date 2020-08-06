@@ -4,27 +4,27 @@ exec_always --no-startup-id $HOME/.config/polybar/launchpolybar.sh
 exec_always picom -f
 exec_always --no-startup-id optimus-manager-qt
 
-#exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
-exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/3JWY37f.jpg
+exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
+#exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/3JWY37f.jpg
 
 exec udiskie -ant
 
 # Instalar autotiling com yay -S autotiling
-exec_always --no-startup-id autotiling
+#exec_always --no-startup-id autotiling
 
 # Needed for i3-gaps
 hide_edge_borders both
 
 # #---Basic Definitions---# #
 set $inner_gaps 15
-set $outer_gaps 5
+set $outer_gaps 15
 
 # #---Gaps---# #
 for_window [class="^.*"] border pixel 2
 gaps inner $inner_gaps
 gaps outer $outer_gaps
 # smart_gaps on
-smart_borders on
+#smart_borders on
 
 # Luke Smith's gaps configuration
 bindsym $mod+s			    gaps inner current plus 5
@@ -33,20 +33,16 @@ bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 
 set $mod Mod4
-#set $altgr ISO_Level3_Shift
 
 set $term --no-startup-id $TERMINAL
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Iosevka 10
+#font pango:Iosevka 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
+font pango:DejaVu Sans Mono 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -65,9 +61,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Adjust brightness
 
-#bindsym XF86MonBrightnessUp
-#bindsym XF86MonBrightnessDown
-
+# Não funciona por alguma razão
+#bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 15
+#bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 15
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -75,18 +71,16 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec $term
 
-bindsym $mod+m exec $term -e ranger
-
-bindsym $altgr+f exec Brave
+# start dmenu (a program launcher)
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb '#4C566A' -sf '#1e1e1e' -sb '#E5E9F0' -nf '#E5E9F0'
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
- #bindsym $mod+d exec dmenu_run
-# bindsym $mod+d exec dmenu_run -nb '#4C566A' -sf '#1e1e1e' -sb '#E5E9F0' -nf '#E5E9F0'
-
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+u exec $BROWSER
+bindsym $mod+ccedilla exec $term -e ranger
 
 # change focus
 bindsym $mod+h focus left
@@ -95,8 +89,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # move around workspaces
-bindsym $mod+n workspace next
-bindsym $mod+p workspace prev
+bindsym $mod+m workspace next
+bindsym $mod+n workspace prev
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -115,8 +109,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacked
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -130,9 +124,8 @@ bindsym $mod+z focus parent
 # focus the child container
 bindsym $mod+x focus child
 
-# y
-bindsym $mod+y			            exec --no-startup-id flameshot gui -p ~/pics/screenshots
-bindsym $mod+Shift+y		        exec --no-startup-id flameshot full -p ~/pics/screenshots
+bindsym Print			            exec --no-startup-id flameshot gui -p ~/pics/screenshots
+bindsym $mod+Print		        exec --no-startup-id flameshot full -p ~/pics/screenshots
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -189,24 +182,24 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
+# same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+# back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -215,17 +208,17 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Window borders
-#client.focused          #4c7899 #285577 #ffffff #ffffff   #ffffff
-#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-#client.urgent           #2f343a #900000 #ffffff #900000   #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-#client.background       #ffffff
+client.focused          #4c7899 #285577 #ffffff #ffffff   #ffffff
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.background       #ffffff
 
 
 # Customize colors
-client.focused          #ff79c6 #ff79c6 #282a36 #ff79c6 #ff79c6
-client.focused_inactive #282a36 #282a36 #f8f8f2 #282a36 #282a36
-client.unfocused        #282a36 #282a36 #f8f8f2 #282a36 #282a36
-client.urgent           #ff5555 #ff5555 #282a36 #ff5555 #ff5555
-client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
+#client.focused          #ff79c6 #ff79c6 #282a36 #ff79c6 #ff79c6
+#client.focused_inactive #282a36 #282a36 #f8f8f2 #282a36 #282a36
+#client.unfocused        #282a36 #282a36 #f8f8f2 #282a36 #282a36
+#client.urgent           #ff5555 #ff5555 #282a36 #ff5555 #ff5555
+#client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
