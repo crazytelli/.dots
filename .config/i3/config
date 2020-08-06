@@ -23,8 +23,9 @@ set $outer_gaps 15
 for_window [class="^.*"] border pixel 2
 gaps inner $inner_gaps
 gaps outer $outer_gaps
-# smart_gaps on
-#smart_borders on
+
+#smart_gaps on
+smart_borders on
 
 # Luke Smith's gaps configuration
 bindsym $mod+s			    gaps inner current plus 5
@@ -207,14 +208,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Window borders
-client.focused          #4c7899 #285577 #ffffff #ffffff   #ffffff
+# Window borders (default)
+#client.focused          #4c7899 #285577 #ffffff #ffffff   #ffffff
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #ffffff
+
+# Window borders Chris @ Machine
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
-
 
 # Customize colors
 #client.focused          #ff79c6 #ff79c6 #282a36 #ff79c6 #ff79c6
@@ -222,3 +230,4 @@ client.background       #ffffff
 #client.unfocused        #282a36 #282a36 #f8f8f2 #282a36 #282a36
 #client.urgent           #ff5555 #ff5555 #282a36 #ff5555 #ff5555
 #client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
+
