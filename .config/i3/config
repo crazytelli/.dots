@@ -35,7 +35,7 @@ bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 set $mod Mod4
 #set $altgr ISO_Level3_Shift
 
-set $term --no-startup-id alacritty
+set $term --no-startup-id $TERMINAL
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
