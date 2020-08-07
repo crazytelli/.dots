@@ -10,8 +10,8 @@ PS1='[\u@\h \W]\$ '
 set -o vi
 
 # Meus alias
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliasrc ]; then
+    . ~/.aliasrc
 fi
 
 if [ -f ~/.profile ]; then
