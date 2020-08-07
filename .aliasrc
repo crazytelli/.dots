@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep="grep --color=auto"
