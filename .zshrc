@@ -103,6 +103,3 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.aliasrc ]; then
     . ~/.aliasrc
 fi
-
-# Git bare repository - gerenciando dot files com git --bare
-alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
