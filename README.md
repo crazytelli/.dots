@@ -8,10 +8,10 @@
 ## Iniciando do zero
 
 ```
-git init --bare $HOME/.cfg
+git init --bare $HOME/.dots
 alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 cfg config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias cfg='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 ## Importando
 A etapa `alias cfg` é o importante para correta execução. Se não estiver iniciando do zero,
