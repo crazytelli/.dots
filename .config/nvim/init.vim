@@ -105,3 +105,17 @@ noremap <leader>0 :tablast<cr>
 " Ranger configuration for image preview inside neovim
 let g:rnvimr_ex_enable = 1
 nmap <space>r :RnvimrToggle<CR>
+
+" Running Python
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+
+
+
+
+
+
+
+
+
