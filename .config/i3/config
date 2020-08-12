@@ -80,9 +80,15 @@ bindsym $mod+d exec dmenu_run -nb '#4C566A' -sf '#1e1e1e' -sb '#E5E9F0' -nf '#E5
 # kill focused window
 bindsym $mod+q kill
 
+bindsym $mod+f fullscreen toggle
 bindsym $mod+u exec $BROWSER
 bindsym $mod+i exec joplin-desktop
 bindsym $mod+ccedilla exec $term -e ranger
+bindsym $mod+n workspace $ws5, exec $term -e newsboat
+
+# move around workspaces
+bindsym $mod+comma workspace next
+bindsym $mod+m workspace prev
 
 # change focus
 bindsym $mod+h focus left
@@ -90,9 +96,6 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# move around workspaces
-bindsym $mod+m workspace next
-bindsym $mod+n workspace prev
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -106,8 +109,6 @@ bindsym $mod+period split h
 # split in vertical orientation
 bindsym $mod+semicolon split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacked
@@ -168,7 +169,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Assign Workspaces:
 assign [class="Brave"] $ws1
-assign [class="Firefox"] $ws2
 assign [class="Joplin"] $ws6
 assign [class="qBittorrent"] $ws7
 assign [class="discord"] $ws8
