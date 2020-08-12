@@ -1,3 +1,7 @@
+https://lukesmith.xyz/youtube.xml
+https://lukesmith.xyz/rss.xml
+https://notrelated.xyz/rss
+
 "query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
 "query:Unread:unread = \"yes\"" meta
 
@@ -8,4 +12,19 @@ https://www.reddit.com/r/ManjaroLinux/new.rss reddit content
 https://www.reddit.com/r/Ubuntu/new.rss reddit content
 https://www.reddit.com/r/commandline/new.rss reddit content
 https://www.reddit.com/r/vim/new.rss reddit content
-https://www.reddit.com/r/unixporn/new.rss reddit
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDXTQ8nWmx_EhZ2v-kp7QxA "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJIcpGAVfGIVgHSQ6oCcrXg "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCT4nDeU5pv1XIGySbSK-GgA "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFXnHnisrIo8TlTnfyGm_5Q "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwONybZQdULFV_ts2911Rqg "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCfzlCWGWYyIQ0aLC5w48gBQ "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC68KSmHePPePCjW4v57VPQg "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0e3QhIYukixgh5VVpKHH9Q "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4JX40jDee_tINbkjycV4Sg "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6107grRI4m0o2-emgoDnAA "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8e4qvyxCHappurTWlvh6UA "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCezIgC97PvUuR4_gbFUs5g "YouTube Subscriptions"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7jBsNZf-wRyJkEmDKBrg2A "YouTube Subscriptions"
