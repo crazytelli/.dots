@@ -16,7 +16,7 @@ highlight GitGutterAdd guifg=#009900 ctermfg=Green
 highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
 highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
 
-"---------------- UltiSnips setup --------------------------
+" ---------------- UltiSnips setup --------------------------
 " Shortcut to jump forward and backward in tabstop positions
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
@@ -56,7 +56,7 @@ let g:Hexokinase_highlighters = ['backgroundfull']
 " Reenable hexokinase on enter
 autocmd VimEnter * HexokinaseTurnOn
 
-" NERDtree configuration
+" ---------------NERDtree configuration--------------------------
 map <leader>nd :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
             \b:NERDTree.isTabTree()) | q | endif
@@ -109,13 +109,3 @@ nmap <space>r :RnvimrToggle<CR>
 " Running Python
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-
-
-
-
-
-
-
-
-
-

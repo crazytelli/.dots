@@ -87,8 +87,8 @@ bindsym $mod+ccedilla exec $term -e ranger
 bindsym $mod+n workspace $ws5, exec $term -e newsboat
 
 # move around workspaces
-bindsym $mod+comma workspace next
-bindsym $mod+m workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # change focus
 bindsym $mod+h focus left
