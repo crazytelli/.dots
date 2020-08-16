@@ -5,7 +5,7 @@ exec_always picom -f
 exec_always --no-startup-id optimus-manager-qt
 
 #exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
-exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/restless.jpg
+exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/thiemeyer_road_to_samarkand.jpg
 
 exec udiskie -ant
 

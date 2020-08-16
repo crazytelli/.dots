@@ -1,7 +1,7 @@
 " ------------------------Colorschemes Settings------------------------------- "
 
 " Gruvbox
-"colorscheme gruvbox
+colorscheme gruvbox
 
 " Palenight Theme
 "let g:material_style='palenight'
@@ -14,8 +14,8 @@
 "let g:airline_theme = 'codedark'
 
 " Nord Theme
-colorscheme nord
-let g:airline_theme = 'nord'
+"colorscheme nord
+"let g:airline_theme = 'nord'
 
 " Vim Deus Theme
 "colorscheme deus
@@ -25,8 +25,8 @@ let g:airline_powerline_fonts = 1
 
 syntax on
 filetype plugin on
-"hi Normal guibg=NONE ctermbg=NONE
-set background=dark
+hi Normal guibg=NONE ctermbg=NONE
+"set background=dark
 set termguicolors
 set encoding=utf-8
 set fileencoding=utf-8
