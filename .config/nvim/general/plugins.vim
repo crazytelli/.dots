@@ -22,6 +22,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'hzchirs/vim-material'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ajmwagar/vim-deus'
+Plug 'dylanaraps/wal'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -47,7 +48,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'dylanaraps/wal'
 "Plug 'skywind3000/asyncrun.vim'
 "Plug 'Chiel92/vim-autoformat'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

@@ -58,8 +58,5 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 
 " LaTeX Conceal. plugin KeitaNakamura/tex-conceal.vim
-let g:tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
-let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
 set conceallevel=2
 let g:tex_conceal="abdgm"
-
