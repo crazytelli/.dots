@@ -15,17 +15,25 @@ elseif has('unix')
     call plug#begin('~/.config/nvim/plugged')
 endif
 
+" Vários temas
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'hzchirs/vim-material'
+Plug 'tomasiser/vim-code-dark'
+Plug 'ajmwagar/vim-deus'
+
+" Airline
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
-"Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'ervandew/supertab'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'

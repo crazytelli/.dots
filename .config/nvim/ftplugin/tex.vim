@@ -1,9 +1,8 @@
-"------------------ settings for Vimtex ------------------------------
+"------------------ settings for Deoplete ------------------------------
 "call deoplete#custom#var('omni', 'input_patterns', {
             "\ 'tex': g:vimtex#re#deoplete
             "\})
 
-let g:vimtex_compiler_progname = 'nvr'
 
 "let g:vimtex_indent_enabled=1
 "let g:vimtex_fold_enabled=1
@@ -19,6 +18,8 @@ let g:vimtex_compiler_progname = 'nvr'
 " Usando plugin FastFold:
 "let g:tex_fold_enabled = 1
 
+" ------------------ Vimtex Settings
+let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_quickfix_mode=0
 "let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_method='zathura'

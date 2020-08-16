@@ -6,9 +6,6 @@ source $HOME/.config/nvim/general/plugins.vim
 source $HOME/.config/nvim/general/configs.vim
 
 
-"let g:airline_theme='nord'
-let g:airline_powerline_fonts = 1
-
 " Vim-gitgutter settings
 let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
@@ -109,3 +106,7 @@ nmap <space>r :RnvimrToggle<CR>
 " Running Python
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+" Compile python code
+"autocmd FileType python map <leader>p :w! \| !python %
+
