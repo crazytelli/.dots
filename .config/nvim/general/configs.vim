@@ -58,5 +58,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 
 " LaTeX Conceal. plugin KeitaNakamura/tex-conceal.vim
+
+highlight Conceal guibg=NONE ctermbg=NONE
 set conceallevel=2
 let g:tex_conceal="abdgm"
