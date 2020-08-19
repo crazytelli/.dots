@@ -1,11 +1,10 @@
 " ------------------------Colorschemes Settings------------------------------- "
 
 " Gruvbox
-colorscheme nord
+colorscheme gruvbox
 
 " Palenight Theme
 "let g:material_style='palenight'
-"set background=dark
 "colorscheme vim-material
 "let g:airline_theme='material'
 
@@ -21,6 +20,10 @@ colorscheme nord
 "colorscheme deus
 "let g:airline_theme = 'deus'
 
+" Onedark
+"colorscheme onedark
+"let g:airline_theme = 'onedark'
+
 let g:airline_powerline_fonts = 1
 
 syntax on
@@ -34,8 +37,8 @@ set number relativenumber
 set noswapfile
 set smartindent
 set nowrap
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartcase
 set incsearch

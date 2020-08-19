@@ -30,4 +30,4 @@ alias cfgc="cfg commit -a"
 alias cfgp="cfg push"
 
 # Diretório TCC
-alias tcc="cd $HOME/ucam/tcc"
+alias tcc="cd $HOME/ucam/tcc && ls"

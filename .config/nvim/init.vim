@@ -99,9 +99,12 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
+" Spell-check set to <leader>o, 'o' for 'orthography':
+map <leader>o :setlocal spell! spelllang=pt_br<CR>
+
 " Ranger configuration for image preview inside neovim
 let g:rnvimr_ex_enable = 1
-nmap <space>r :RnvimrToggle<CR>
+nmap <leader>r :RnvimrToggle<CR>
 
 " Running Python
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
