@@ -1,7 +1,7 @@
 " ------------------------Colorschemes Settings------------------------------- "
 
 " Gruvbox
-colorscheme gruvbox
+colorscheme nord
 
 " Palenight Theme
 "let g:material_style='palenight'
