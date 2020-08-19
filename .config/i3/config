@@ -9,17 +9,18 @@
 exec_always --no-startup-id $HOME/.config/polybar/launchpolybar.sh
 exec_always picom -f
 exec_always --no-startup-id optimus-manager-qt
+exec udiskie -ant
+exec --no-startup-id nm-applet
 
 #exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
 exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/thiemeyer_road_to_samarkand.jpg
-
-exec udiskie -ant
 
 # Instalar autotiling com yay -S autotiling
 #exec_always --no-startup-id autotiling
 
 # Needed for i3-gaps
-hide_edge_borders both
+#hide_edge_borders both
+hide_edge_borders smart
 
 # #---Basic Definitions---# #
 set $inner_gaps 15
@@ -31,7 +32,7 @@ gaps inner $inner_gaps
 gaps outer $outer_gaps
 
 #smart_gaps on
-smart_borders on
+#smart_borders on
 
 # Luke Smith's gaps configuration
 bindsym $mod+s			    gaps inner current plus 5
@@ -40,27 +41,17 @@ bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 
 set $mod Mod4
+set $lock i3lock
 
 set $term --no-startup-id $TERMINAL
+floating_modifier $mod
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Adjust brightness
 
@@ -70,24 +61,33 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+
+# ========== DUAL MONITOR SETUP ============================ #
+# Monitor baseado no output do xrandr
+set $mainmonitor eDP-1
+set $secondmonitor HDMI-1-0
 
 # start a terminal
 bindsym $mod+Return exec $term
 
-# start dmenu (a program launcher)
+bindsym $mod+dead_tilde exec $term
+bindsym $mod+dead_acute exec $term
+
+# Bloqueia o pc
+bindsym $mod+Escape exec --no-startup-id $lock
+
+# start dmenu
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec dmenu_run -nb '#4C566A' -sf '#1e1e1e' -sb '#E5E9F0' -nf '#E5E9F0'
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # kill focused window
 bindsym $mod+q kill
-
 bindsym $mod+f fullscreen toggle
-bindsym $mod+u exec $BROWSER
+bindsym $mod+b exec $BROWSER
 bindsym $mod+i exec joplin-desktop
 bindsym $mod+ccedilla exec $term -e ranger
-bindsym $mod+n workspace $ws5, exec $term -e newsboat
+bindsym $mod+n workspace $ws5; exec $term -e newsboat
 
 # move around workspaces
 bindsym $mod+Tab workspace next
@@ -98,7 +98,6 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -146,12 +145,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# ========== DUAL MONITOR SETUP ============================ #
-
-# Monitor baseado no output do xrandr
-set $mainmonitor eDP-1
-set $secondmonitor HDMI-1-0
-
 #$ws1 output $mainmonitor
 workspace 1 output $mainmonitor
 workspace 2 output $mainmonitor
@@ -190,20 +183,20 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # TODO verificar porque nao funciona.
 # Move workspaces betweeen monitors
-bindsym $mod+Control+m move workspace to output primary
-bindsym $mod+Control+s move workspace to output HDMI-1
-bindsym $mod+Control+l move workspace to output right
-bindsym $mod+Control+h move workspace to output left
-bindsym $mod+Control+j move workspace to output down
-bindsym $mod+Control+k move workspace to output up
+# bindsym $mod+Control+m move workspace to output primary
+# bindsym $mod+Control+s move workspace to output HDMI-1
+# bindsym $mod+Control+l move workspace to output right
+# bindsym $mod+Control+h move workspace to output left
+# bindsym $mod+Control+j move workspace to output down
+# bindsym $mod+Control+k move workspace to output up
 
 # Moves container to the active workspace on another screen
-bindsym $mod+Shift+Control+m move container to output primary
-bindsym $mod+Shift+Control+s move container to output HDMI-1
-bindsym $mod+Shift+Control+l move container to output right
-bindsym $mod+Shift+Control+h move container to output left
-bindsym $mod+Shift+Control+j move container to output down
-bindsym $mod+Shift+Control+k move container to output up
+# bindsym $mod+Shift+Control+m move container to output primary
+# bindsym $mod+Shift+Control+s move container to output HDMI-1
+# bindsym $mod+Shift+Control+l move container to output right
+# bindsym $mod+Shift+Control+h move container to output left
+# bindsym $mod+Shift+Control+j move container to output down
+# bindsym $mod+Shift+Control+k move container to output up
 
 # Assign Workspaces:
 assign [class="Brave"] $ws1
@@ -223,53 +216,70 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-# These bindings trigger as soon as you enter the resize mode
+# Resize Window. It runs the script i3resize from luke smith
+bindsym $mod+Shift+y		exec --no-startup-id i3resize left
+bindsym $mod+Shift+u		exec --no-startup-id i3resize down
+bindsym $mod+Shift+i		exec --no-startup-id i3resize up
+bindsym $mod+o			sticky toggle
+bindsym $mod+Shift+o		exec --no-startup-id i3resize right
 
-# Pressing left will shrink the window’s width.
-# Pressing right will grow the window’s width.
-# Pressing up will shrink the window’s height.
-# Pressing down will grow the window’s height.
-bindsym h resize shrink width 5 px or 5 ppt
-bindsym j resize grow height 5 px or 5 ppt
-bindsym k resize shrink height 5 px or 5 ppt
-bindsym l resize grow width 5 px or 5 ppt
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# same bindings, but for the arrow keys
-bindsym Left resize shrink width 5 px or 5 ppt
-bindsym Down resize grow height 5 px or 5 ppt
-bindsym Up resize shrink height 5 px or 5 ppt
-bindsym Right resize grow width 5 px or 5 ppt
+# set gruvbox colorscheme colors
+#set $bg #282828
+#set $red #cc241d
+#set $green #98971a
+#set $yellow #d79921
+#set $blue #458588
+#set $purple #b16286
+#set $aqua #689d68
+#set $gray #a89984
+#set $darkgray #1d2021
 
-# back to normal: Enter or Escape or $mod+r
-bindsym Return mode "default"
-bindsym Escape mode "default"
-bindsym $mod+r mode "default"
-}
+# set Nord colorscheme colors
 
-bindsym $mod+r mode "resize"
+set $black:    #0x3B4252
+set $red:      #0xBF616A
+set $green:    #0xA3BE8C
+set $yellow:   #0xEBCB8B
+set $blue:     #0x81A1C1
+set $magenta:  #0xB48EAD
+set $cyan:     #0x88C0D0
+set $white:    #0xE5E9F0
+
+# green gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $green $green $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $blue $blue $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
 
 # Window borders (default)
-#client.focused          #4c7899 #285577 #ffffff #ffffff   #ffffff
-#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-#client.urgent           #2f343a #900000 #ffffff #900000   #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-#client.background       #ffffff
+# client.focused          #4c7899 #285577 #ffffff #ffffff   #ffffff
+# client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #2f343a #900000 #ffffff #900000   #900000
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.background       #ffffff
 
 # Window borders Chris @ Machine
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
-
-# Customize colors
-#client.focused          #ff79c6 #ff79c6 #282a36 #ff79c6 #ff79c6
-#client.focused_inactive #282a36 #282a36 #f8f8f2 #282a36 #282a36
-#client.unfocused        #282a36 #282a36 #f8f8f2 #282a36 #282a36
-#client.urgent           #ff5555 #ff5555 #282a36 #ff5555 #ff5555
-#client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
+ client.focused          #4c7899 #285577 #ffffff #2e9ef4   #abb2bf
+ client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+ client.urgent           #2f343a #900000 #ffffff #900000   #900000
+ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+ client.background       #ffffff
 
