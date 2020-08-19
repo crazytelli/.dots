@@ -220,8 +220,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+y		exec --no-startup-id i3resize left
 bindsym $mod+Shift+u		exec --no-startup-id i3resize down
 bindsym $mod+Shift+i		exec --no-startup-id i3resize up
-bindsym $mod+o			sticky toggle
 bindsym $mod+Shift+o		exec --no-startup-id i3resize right
+bindsym $mod+o			sticky toggle
+#bindsym $mod+u              exec --no-startup-id $term -t calcpy -e python
+bindsym $mod+u              exec $term -t calcpy -e python
+#[title="calcpy"] scratchpad show;
+
+# #---Dropdown Windows---# #
+# General calcpy window traits. The order can matter.
+#for_window [title="calcpy_*"] floating enable
+for_window [title="calcpy"] move scratchpad
+for_window [title="calcpy"] sticky enable
+for_window [title="calcpy"] scratchpad show
+for_window [title="calcpy"] resize set 625 450
+for_window [title="calcpy"] move position center
+for_window [title="calcpy"] border pixel 5
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
