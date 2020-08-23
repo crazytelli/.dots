@@ -27,8 +27,10 @@ alert = #bd2c40
 
 [bar/master]
 ;monitor = ${env:MONITOR:HDMI-1-0}
-;monitor = ${env:MONITOR:eDP-1}
-monitor = ${env:MONITOR1:}
+monitor = ${env:MONITOR:eDP-1}
+; caso esteja usando nvidia:
+;monitor = ${env:MONITOR:eDP-1-1}
+;monitor = ${env:MONITOR1:}
 ;monitor =
 
 monitor-fallback =

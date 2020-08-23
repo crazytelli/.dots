@@ -1,4 +1,8 @@
-#! /bin/bash 
+#! /bin/bash
 picom &
+nm-applet &
 nitrogen --restore &
-urxvtd -q -o -f &
+optimus-manager-qt &
+udiskie -ant &
+
+#urxvtd -q -o -f &

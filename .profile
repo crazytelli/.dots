@@ -11,3 +11,4 @@ export PATH=$HOME/.local/bin:$PATH
 
 # path para meus scripts pessoais
 export PATH=$HOME/.scripts:$PATH
+export PATH=$HOME/.scripts/statusbar:$PATH
