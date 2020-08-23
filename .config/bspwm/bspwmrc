@@ -1,8 +1,12 @@
 #! /bin/sh
 
+# Launch programs
 sxhkd &
-np-applet &
+nm-applet &
 picom -f &
+#udiskie -ant &
+nitrogen --restore &
+optimus-manager-qt &
 $HOME/.config/polybar/launchpolybar.sh &
 
 
