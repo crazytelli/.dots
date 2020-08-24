@@ -11,9 +11,9 @@ exec_always picom -f
 exec_always --no-startup-id optimus-manager-qt
 exec udiskie -ant
 exec --no-startup-id nm-applet
-
-#exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
-                                                                           exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/thiemeyer_road_to_samarkand.jpg
+exec_always --no-startup-id numlockx on
+#exec_always --no-startup-id feh --bg-scale ~/pics/wallpapers/thiemeyer_road_to_samarkand.jpg
+exec_always --no-startup-id feh --bg-scale --randomize ~/pics/wallpapers/*.jpg
 
 # Instalar autotiling com yay -S autotiling
 #exec_always --no-startup-id autotiling
