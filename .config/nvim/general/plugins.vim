@@ -38,18 +38,14 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'ervandew/supertab'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
-"Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'Konfekt/FastFold'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Plug 'justinmk/vim-sneak'
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-"Plug 'skywind3000/asyncrun.vim'
-"Plug 'Chiel92/vim-autoformat'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "let g:deoplete#enable_at_startup = 1
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
