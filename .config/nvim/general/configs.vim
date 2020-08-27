@@ -1,35 +1,8 @@
-" ------------------------Colorschemes Settings------------------------------- "
-
-" Gruvbox
-"colorscheme gruvbox
-
-" Palenight Theme
-"let g:material_style='palenight'
-"colorscheme vim-material
-"let g:airline_theme='material'
-
-" Vim Code Dark Theme
-colorscheme codedark
-let g:airline_theme = 'codedark'
-
-" Nord Theme
-"colorscheme nord
-"let g:airline_theme = 'nord'
-
-" Vim Deus Theme
-"colorscheme deus
-"let g:airline_theme = 'deus'
-
-" Onedark
-"colorscheme onedark
-"let g:airline_theme = 'onedark'
-
-let g:airline_powerline_fonts = 1
-
+" Configurações que não dependem de nenhum plugin
 syntax on
 filetype plugin on
 hi Normal guibg=NONE ctermbg=NONE
-"set background=dark
+set background=dark
 set termguicolors
 set encoding=utf-8
 set fileencoding=utf-8
@@ -56,12 +29,56 @@ set clipboard+=unnamedplus
 let mapleader = " "
 let g:tex_flavor = 'latex'
 
+" Ativa spellcheck para português com leader + o. O de 'ortografia'
+map <leader>o :setlocal spell! spelllang=pt_br<CR>
+
 "spell check shortcut Ctrl+L
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
-
 " LaTeX Conceal. plugin KeitaNakamura/tex-conceal.vim
-
+" Quase certeza de que essa config não tem nada a ver com o plugin
 highlight Conceal guibg=NONE ctermbg=NONE
 set conceallevel=2
 let g:tex_conceal="abdgm"
+
+"Disables automatic commenting on newline:
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Automatically deletes all trailing whitespace on save.
+autocmd BufWritePre * %s/\s\+$//e
+
+" Ctrl + h,j,k,l para mover entre buffers
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+"após pesquisar algo com (/), (esc)x2 apaga o highlight
+nnoremap <esc><esc> :noh<CR>
+
+" ajusta tamanho do buffer atual com Alt
+nnoremap <silent> <M-j>    :resize -2<CR>
+nnoremap <silent> <M-k>    :resize +2<CR>
+nnoremap <silent> <M-h>    :vertical resize -2<CR>
+nnoremap <silent> <M-l>    :vertical resize +2<CR>
+
+" Move a linha selecionada pra cima ou para baixo
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
+
+" Navigate tabs easily
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+" Executa o buffer atual em python com F9
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
