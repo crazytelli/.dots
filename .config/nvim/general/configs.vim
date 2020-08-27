@@ -1,7 +1,7 @@
 " ------------------------Colorschemes Settings------------------------------- "
 
 " Gruvbox
-colorscheme gruvbox
+"colorscheme gruvbox
 
 " Palenight Theme
 "let g:material_style='palenight'
@@ -9,8 +9,8 @@ colorscheme gruvbox
 "let g:airline_theme='material'
 
 " Vim Code Dark Theme
-"colorscheme codedark
-"let g:airline_theme = 'codedark'
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 " Nord Theme
 "colorscheme nord

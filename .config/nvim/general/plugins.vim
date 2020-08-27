@@ -22,7 +22,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'hzchirs/vim-material'
 Plug 'tomasiser/vim-code-dark'
 Plug 'ajmwagar/vim-deus'
-Plug 'dylanaraps/wal'
+Plug 'dylanaraps/wal.vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'
